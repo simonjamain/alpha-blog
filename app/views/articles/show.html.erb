@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+<p>
+    <%= @article.description %>
+</p>
+<span>Last modified: <%= @article.updated_at.to_s %></span>
+<br>
+<%= link_to 'new article', new_article_path %>
