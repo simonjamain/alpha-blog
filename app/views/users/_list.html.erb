@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+
+<h3><%= user.username %></h3>
+<%= gravatar_for user %>
+<%= link_to 'profile', user_path(user) %>
+<% end %>
