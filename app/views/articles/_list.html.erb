@@ -1,0 +1,16 @@
+<% articles.each do |article|%>
+<h2><%= article.title %></h2>
+<p>
+    <%= article.description %>
+</p>
+<span>Last modified: <%= article.updated_at.to_s %></span>
+<br>
+<%= render "articles/infos", article: article %>
+<br>
+<%= link_to 'show this article', article_path(article) %>
+&nbsp;|&nbsp;
+<%= link_to 'edit this article', edit_article_path(article) %>
+&nbsp;|&nbsp;
+<%= link_to 'delete this article', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
+<hr>
+<% end %>
